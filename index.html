@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142b4a">
+  <title>WeatherWatch - Weather Station Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h2>🌦️ WeatherWatch</h2>
+      <span>Weather Station Management</span>
+    </header>
+
+    <main class="container">
+      <section class="welcome">
+        <p class="tag">WEATHER MONITORING SYSTEM</p>
+        <h1>Weather Station Dashboard</h1>
+        <p>Monitor weather conditions across different cities.</p>
+      </section>
+
+      <section class="search-card">
+        <h2>Search City</h2>
+        <form id="weather-form">
+          <input id="city-input" type="text" placeholder="Enter city name"
+                 value="Chennai" aria-label="Enter city name" autocomplete="off">
+          <button id="search-button" type="submit">Search Weather</button>
+        </form>
+        <p id="error-message" class="error-message" role="alert" hidden></p>
+      </section>
+
+      <section class="weather-grid" aria-label="Current weather">
+        <div class="weather-card">
+          <span>🌡️ Temperature</span>
+          <h2 id="temperature">-- °C</h2>
+          <p>Current temperature</p>
+        </div>
+        <div class="weather-card">
+          <span>💧 Humidity</span>
+          <h2 id="humidity">-- %</h2>
+          <p>Relative humidity</p>
+        </div>
+        <div class="weather-card">
+          <span>🌬️ Wind Speed</span>
+          <h2 id="wind-speed">-- km/h</h2>
+          <p>Current wind speed</p>
+        </div>
+      </section>
+
+      <section class="station-card">
+        <h2>📡 Weather Stations</h2>
+        <p id="station-message">Search for a city to load its current weather data.</p>
+        <div class="station-row" id="city-row" hidden>
+          <span>City</span>
+          <strong id="station-city"></strong>
+        </div>
+        <div class="station-row">
+          <span>Connection Status</span>
+          <strong id="connection-status">Not connected yet</strong>
+        </div>
+      </section>
+
+      <footer>Centralized Weather Station Management System</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
